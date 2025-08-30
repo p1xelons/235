@@ -1,1 +1,0 @@
-ErrorDocument 404 /sah3461/235/error/error.html
