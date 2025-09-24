@@ -13,3 +13,13 @@ figure img {
 h2 {
     clear: both;
 }
+.tet {
+    float: left;
+    width: 500px;
+    border: 1px solid black;
+}
+footer {
+    clear: both;
+    position: relative;
+    top: 5px;
+}
