@@ -11,5 +11,5 @@ figure img {
     width: 40vw;
 }
 h2 {
-    clear: left;
+    clear: both;
 }
