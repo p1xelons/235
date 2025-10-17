@@ -1,0 +1,25 @@
+/* Do everything in this file */
+/* add solid red line */
+h1,h2,h3 {
+    border-bottom-style: solid;
+    border-bottom-color: red;
+}
+/* float the 19 block image to right */
+figure img {
+    float: right;
+    margin-left: 15px;
+    width: 40vw;
+}
+h2 {
+    clear: both;
+}
+.tet {
+    float: left;
+    width: 500px;
+    border: 1px solid black;
+}
+footer {
+    clear: both;
+    position: relative;
+    top: 5px;
+}
