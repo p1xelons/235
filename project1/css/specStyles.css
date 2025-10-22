@@ -57,7 +57,12 @@ h4 { font-size: 14px; }
     padding: 30px;
     background-color: #e8e8e8;
 }
-.page-left, .page-right {
+.page-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.page-right {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
