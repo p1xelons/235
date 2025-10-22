@@ -105,6 +105,26 @@ h4 { font-size: 14px; }
 .small-image {
     min-height: 120px;
 }
+/* Side-by-side image and text layout */
+.content-with-image {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+    align-items: start;
+    margin: 15px 0;
+}
+.content-with-image.reverse {
+    grid-template-columns: 200 1fr;
+}
+
+.content-with-image .image-area {
+    margin: 0;
+    min-height: 150px;
+}
+.content-with-image img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Button Indicators */
 .button-combo {
