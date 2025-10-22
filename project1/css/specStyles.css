@@ -25,24 +25,15 @@ header {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, #4a6fa5 0%, #7fa5d9 100%);
     padding: 15px 30px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: bold;
-}
-h1 { font-size: 18px; }
-h2 { font-size: 20px; }
-h3 { font-size: 16px; }
-h4 { font-size: 14px; }
-
-.header-left {
+.header-left, .header-right {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 .header-title {
     font-size: 18px;
@@ -51,6 +42,16 @@ h4 { font-size: 14px; }
     font-style: italic;
     font-size: 20px;
 }
+
+/* Text Styling for Headers */
+h1, h2, h3, h4 {
+    margin: 0;
+    font-weight: bold;
+}
+h1 { font-size: 18px; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+h4 { font-size: 14px; }
 
 /* Main content */
 .page {
@@ -175,7 +176,7 @@ h4 { font-size: 14px; }
     height: 35px;
 }
 .action-label {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    background: #004ce5;
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
