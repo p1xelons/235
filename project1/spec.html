@@ -50,11 +50,14 @@
                 </div>
             </section>
 
-            <!-- Lower left section -->
-             <section class="section">
-                <div style="margin-bottom: 15px;">
+            <!-- Lower Section -->
+            <section class="section">
+                <div class="content-with-image">
                     <h4>In the Direction You Want to Climb</h4>
                     <p>For large blocks, push the 3D Stick while pressing the A Button. Depending on the location, you may be able to climb using only the 3D Stick.</p>
+                </div>
+                <div class="image-area small-image">
+                    <img src="path/to/link-climbing-block.png" alt="Link climbing over block">
                 </div>
 
                 <div class="action-label">Grab ➡ Push/Pull</div>
@@ -68,19 +71,18 @@
                 </div>
 
                 <div class="content-with-image">
+                    <div class="image-area small-image">
+                        <img src="path/to/link-pushing-block.png" alt="Link pushing block">
+                    </div>
                     <div>
                         <p>After grabbing a block (when "Grab" is displayed in front of the block, you can grab it with the A Button), push the 3D Stick in the direction you want to move while holding A.</p>
                     </div>
-                    <div class="image-area small-image">
-                        <img src="path/to/link-pushing-block.png" alt="Link pushing block">
-                        <span>[Link pushing block]</span>
-                    </div>
                 </div>
             </section>
-         </main>
+        </main>
 
-         <!-- Right Page-->
-          <main class="page page-right">
+        <!-- Right Page -->
+        <main class="page page-right">
             <!-- Top Section -->
             <section class="section">
                 <div class="action-label">Grab ➡ Throw / Put Down</div>
@@ -95,52 +97,78 @@
                     <span class="btn-a">A</span>
                 </div>
 
-                <div class="image-area">
-                    [Link throwing bomb image]
+                <div class="content-with-image reverse">
+                    <div class="image-area">
+                        <img src="path/to/link-throwing-bomb.png" alt="Link throwing bomb">
+                        <span>[Link throwing bomb]</span>
+                    </div>
+                    <div>
+                        <p>Items other than bombs can be thrown without tilting the 3D Stick.</p>
+                    </div>
                 </div>
-
-                <p>Items other than bombs can be thrown without tilting the 3D Stick.</p>
             </section>
 
             <!-- Treasure Chest Section -->
             <section class="section">
-                <div class="image-area">
-                    [Treasure chest image]
+                <div class="content-with-image">
+                    <div>
+                        <div class="action-label">Open</div>
+                        
+                        <p>In addition to opening treasure chests, when you stand in front of a door, "Open" will be displayed on the icon. When talking to people, if the conversation continues, "Next" will be displayed. Please read the messages carefully before proceeding to the next message.</p>
+                    </div>
+                    <div class="image-area">
+                        <img src="path/to/treasure-chest.png" alt="Treasure chest">
+                        <span>[Treasure chest]</span>
+                    </div>
                 </div>
 
-                <div class="action-label">Open</div>
-                
-                <p>In addition to opening treasure chests, when you stand in front of a door, "Open" will be displayed on the icon. When talking to people, if the conversation continues, "Next" will be displayed. Please read the messages carefully before proceeding to the next message.</p>
-
-                <div class="yellow-box">
-                    <div class="yellow-box-header">Other Action Icons</div>
-                    
-                    <div style="margin: 10px 0;">
-                        <strong>Talk</strong>
-                        <p>Stand in front of a person and "Talk" will be displayed on the icon (if you use "Z-Targeting," you can talk even from a distance).</p>
+                <!-- Yellow box and side content in two columns -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                    <div>
+                        <div class="action-label">Pick Up</div>
+                        <div class="image-area small-image">
+                            <img src="path/to/link-opening-door.png" alt="Link opening door">
+                            <span>[Link at door]</span>
+                        </div>
+                        <p style="font-size: 13px; margin-top: 10px;">Near doors or when you can open something, the icon will display the appropriate action.</p>
+                        
+                        <div class="screenshot" style="margin-top: 10px;">
+                            <img src="path/to/screenshot2.png" alt="Game screenshot">
+                            <span>[Screenshot 2]</span>
+                        </div>
                     </div>
 
-                    <div style="margin: 10px 0;">
-                        <strong>Check</strong>
-                        <p>Displayed when reading signs, etc.</p>
-                    </div>
+                    <div class="yellow-box" style="height: 100%;">
+                        <div class="yellow-box-header">Other Action Icons</div>
+                        
+                        <div style="margin: 10px 0;">
+                            <strong>Talk</strong>
+                            <p style="font-size: 12px;">Stand in front of a person and "Talk" will be displayed on the icon (if you use "Z-Targeting," you can talk even from a distance).</p>
+                        </div>
 
-                    <div class="screenshot-grid">
-                        <div class="screenshot">[Game screenshot 1]</div>
-                        <div class="screenshot">[Game screenshot 2]</div>
+                        <div style="margin: 10px 0;">
+                            <strong>Check</strong>
+                            <p style="font-size: 12px;">Displayed when reading signs, etc.</p>
+                        </div>
+
+                        <div class="screenshot" style="margin-top: 10px;">
+                            <img src="path/to/screenshot1.png" alt="Game screenshot" style="width: 100%;">
+                            <span>[Screenshot 1]</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <div class="additional-actions">
+            <div style="background: #d8d8ff; padding: 10px; text-align: center; border-radius: 5px; margin-top: 10px;">
                 ※ Other action icons will also be displayed besides these.
             </div>
         </main>
 
+        <!-- Footer -->
         <footer>
-            <span class="page-number">1</span>
+            <span class="page-number">16</span>
             THE LEGEND OF ZELDA - Ocarina of Time 取扱説明書
-            <span class="page-number">2</span>
+            <span class="page-number">17</span>
         </footer>
     </div>
 </body>

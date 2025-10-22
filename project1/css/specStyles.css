@@ -114,7 +114,7 @@ h4 { font-size: 14px; }
     margin: 15px 0;
 }
 .content-with-image.reverse {
-    grid-template-columns: 200 1fr;
+    grid-template-columns: 200px 1fr;
 }
 
 .content-with-image .image-area {
