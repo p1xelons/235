@@ -23,7 +23,7 @@ body {
 /* Header Sections */
 header {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, #4a6fa5 0%, #7fa5d9 100%);
+    background: linear-gradient(135deg, #2c4b40 0%, #74d194 100%);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,7 @@ h4 { font-size: 16px; }
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .section-header {
-    background: linear-gradient(to right, #3a5a8a, #5a7aaa);
+    background: linear-gradient(to right, #2c4b40, #467961);
     color: white;
     padding: 12px 20px;
     border-radius: 25px;
@@ -92,7 +92,7 @@ h4 { font-size: 16px; }
     line-height: 1.8;
 }
 .image-area {
-    padding: 20px;
+    padding: 12px;
     margin: 10px 0;
     text-align: center;
     min-height: 200px;
@@ -108,7 +108,7 @@ h4 { font-size: 16px; }
 .content-with-image {
     display: grid;
     grid-template-columns: 1fr 200px;
-    gap: 20px;
+    gap: 12px;
     align-items: start;
     margin: 15px 0;
 }
@@ -174,7 +174,7 @@ h4 { font-size: 16px; }
     height: 35px;
 }
 .action-label {
-    background: #004ce5;
+    background: #2c4b40;
     color: white;
     padding: 5px 15px;
     border-radius: 5px;
