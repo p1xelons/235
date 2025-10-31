@@ -241,6 +241,32 @@ footer {
     margin: 0 10px;
 }
 
+/* Links */
+/* unvisited link */
+a:link {
+  color: rgb(17, 124, 14);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(25, 255, 178, 0.832);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(66, 11, 185);
+}
+
+/* selected link */
+a:active {
+  color: rgb(22, 81, 170);
+}
+
+/* tabbing it */
+a:focus {
+    color: #74d194;
+}
+
 /* Adapting */
 @media (max-width: 768px) {
     body {
