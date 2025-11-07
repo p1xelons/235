@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li>Dewgong</li>
+        <li>Bulbasaur</li>
+        <li>Gyrados</li>
+        <li>Squirtle</li>
+        <li>Mudkip</li>
+    </ul>
+
+    <script>
+
+        let pokemons = document.querySelectorAll("li");
+
+        pokemons[0].style.color = "red";
+
+        const rainbow = ["red", "orange", "yellow", "green", "blue", "purple"];
+
+        const oneThing = document.querySelector("li");
+
+        const PickColor = (array, colors) => {
+            for (let i = 0; i < array.length; i++) {
+            array[i].style.color = colors[i % colors.length];
+        }
+        }
+
+        PickColor(pokemons, rainbow);
+
+        
+
+
+    </script>
+</body>
+</html>
