@@ -16,24 +16,21 @@
     </ul>
 
     <script>
+    
+    let r = Math.ceil(Math.random() * 100);
+    let oldRandom = localStorage.getItem("randomNum");
 
-        let pokemons = document.querySelectorAll("li");
+    console.log(r);
 
-        pokemons[0].style.color = "red";
+    // save to local storage
+    localStorage.setItem("randomNum", JSON.stringify(r));
+    let retrievedNum = parseFloat(localStorage.getItem("randomNum"));
 
-        const rainbow = ["red", "orange", "yellow", "green", "blue", "purple"];
-
-        const oneThing = document.querySelector("li");
-
-        const PickColor = (array, colors) => {
-            for (let i = 0; i < array.length; i++) {
-            array[i].style.color = colors[i % colors.length];
-        }
-        }
-
-        PickColor(pokemons, rainbow);
-
-        
+    // if
+    if (isNaN(retrievedNum) || r > retrievedNum) {
+        console.log(r);
+        localStorage.setItem("randomNum", JSON.stringify(r));
+    }
 
 
     </script>
