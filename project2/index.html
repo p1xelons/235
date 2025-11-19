@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Ship Search</title>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Star Wars Starship Database 🚀</h1>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="searchterm">Search Starship Name:</label>
+                <input type="text" id="searchterm" placeholder="Enter starship name (e.g., X-wing, Falcon)">
+            </div>
+
+            <div class="filter-row">
+                <div class="control-group">
+                    <label for="filmFilter">Filter by Film:</label>
+                    <select id="filmFilter">
+                        <option value="all">All Films</option>
+                        <option value="1">A New Hope</option>
+                        <option value="2">The Empire Strikes Back</option>
+                        <option value="3">Return of the Jedi</option>
+                        <option value="4">The Phantom Menace</option>
+                        <option value="5">Attack of the Clones</option>
+                        <option value="6">Revenge of the Sith</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="classFilter">Filter by Class:</label>
+                    <select id="classFilter">
+                        <option value="all">All Classes</option>
+                        <option value="Starfighter">Starfighter</option>
+                        <option value="corvette">Corvette</option>
+                        <option value="Star Destroyer">Star Destroyer</option>
+                        <option value="freighter">Freighter</option>
+                        <option value="cruiser">Cruiser</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="passengerFilter">Min Passengers:</label>
+                    <select id="passengerFilter">
+                        <option value="0">Any Amount</option>
+                        <option value="10">10+</option>
+                        <option value="50">50+</option>
+                        <option value="100">100+</option>
+                        <option value="1000">1000+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group" style="margin-top: 20px;">
+                <button id="search">Search Starships</button>
+            </div>
+        </div>
+
+        <div id="status"></div>
+        <div id="content"></div>
+    </div>
+
+    <script src="starship-search.js"></script>
+</body>
+</body>
+</html>
