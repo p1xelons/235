@@ -67,3 +67,12 @@ label {
     color: #ffe81f;
     font-weight: bold;
 }
+
+input[type=text],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffe81f;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
