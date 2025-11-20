@@ -12,7 +12,7 @@ function searchButtonClicked() {
     // console.log("searchButtonClicked() called");
     
     // swapi url
-    const SWAPI_URL = "https://swapi.info/api/vehicles";
+    const SWAPI_URL = "https://swapi.info/api/starships";
     
     // find search term
     let term = document.querySelector("#searchterm").value;
@@ -74,12 +74,12 @@ function dataLoaded(xhr, searchTerm, filmFilter, classFilter, passengerFilter) {
 
 function filterStarships(starships, searchTerm, filmFilter, classFilter, passengerFilter) {
     return starships.filter(starship => {
-        // 1 - Filter by search term (name)
+        // filter by name
         if (searchTerm && !starship.name.toLowerCase().includes(searchTerm.toLowerCase())) {
             return false;
         }
         
-        // 2 - Filter by film
+        // filter film
         if (filmFilter !== "all") {
             const filmURL = `https://swapi.info/api/films/${filmFilter}`;
             if (!starship.films.includes(filmURL)) {
@@ -87,14 +87,14 @@ function filterStarships(starships, searchTerm, filmFilter, classFilter, passeng
             }
         }
         
-        // 3 - Filter by class
+        // filter class
         if (classFilter !== "all") {
             if (!starship.starship_class.toLowerCase().includes(classFilter.toLowerCase())) {
                 return false;
             }
         }
         
-        // 4 - Filter by minimum passengers
+        // passanger filter
         if (passengerFilter !== "0") {
             const passengers = parseInt(starship.passengers.replace(/,/g, ""));
             const minPassengers = parseInt(passengerFilter);
@@ -107,44 +107,42 @@ function filterStarships(starships, searchTerm, filmFilter, classFilter, passeng
     });
 }
 
-// 9 - Display filtered results
 function displayResults(results) {
-    // 1 - Check if no results
+    // check if there are no results
     if (results.length === 0) {
         document.querySelector("#status").innerHTML = "<b class='no-results'>No starships match your filters</b>";
         document.querySelector("#content").innerHTML = "";
         return;
     }
     
-    // 2 - Build HTML string
+    // start building html string
     let bigString = "";
     
-    // 3 - Loop through results
+    // loop through results
     for (let i = 0; i < results.length; i++) {
         let starship = results[i];
         bigString += createStarshipCard(starship);
     }
     
-    // 4 - Update content
+    // update content
     document.querySelector("#content").innerHTML = bigString;
     
-    // 5 - Update status
+    // update status
     const filterText = displayTerm ? ` for '${displayTerm}'` : "";
     document.querySelector("#status").innerHTML = `<b>Found ${results.length} starship(s)${filterText}</b>`;
 }
 
-// 10 - Create HTML card for a starship
 function createStarshipCard(starship) {
-    // 1 - Extract film numbers from URLs
+    // get film numbers
     const filmNumbers = starship.films.map(filmURL => {
         const match = filmURL.match(/\/(\d+)$/);
         return match ? match[1] : "";
     }).filter(num => num);
     
-    // 2 - Map film numbers to titles
+    // map them to film title
     const filmTitles = filmNumbers.map(num => getFilmTitle(num)).join(", ");
     
-    // 3 - Build card HTML
+    // html card
     let card = `
         <div class="starship-card">
             <div class="starship-name">${starship.name}</div>
@@ -164,7 +162,6 @@ function createStarshipCard(starship) {
     return card;
 }
 
-// 11 - Get film title from film number
 function getFilmTitle(filmNumber) {
     const filmTitles = {
         "1": "A New Hope",
@@ -178,7 +175,6 @@ function getFilmTitle(filmNumber) {
     return filmTitles[filmNumber] || "Unknown";
 }
 
-// 12 - Format cost for display
 function formatCost(cost) {
     if (cost === "unknown" || !cost) {
         return "Unknown";
@@ -195,7 +191,6 @@ function formatCost(cost) {
     return numCost.toLocaleString();
 }
 
-// 13 - Handle data loading errors
 function dataError(e) {
     // console.log("An error occurred loading data");
     document.querySelector("#status").innerHTML = "<b class='no-results'>Error loading starship data. Please try again.</b>";
