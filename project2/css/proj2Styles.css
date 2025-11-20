@@ -31,7 +31,7 @@
 /* main default css for searching interface */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #000000, #1a1a2e);
+    background: linear-gradient(135deg, #000000, #0d0d16);
     color: #fff;
     padding: 20px;
     margin: 0;
@@ -78,4 +78,22 @@ select {
   margin: 10px 0;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+/* button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ffe81f;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 232, 31, 0.4);
 }
