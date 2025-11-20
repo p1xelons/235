@@ -9,7 +9,7 @@ let allStarships = [];
 
 // search is clicked
 function searchButtonClicked() {
-    console.log("searchButtonClicked() called");
+    // console.log("searchButtonClicked() called");
     
     // swapi url
     const SWAPI_URL = "https://swapi.info/api/vehicles";
@@ -51,7 +51,7 @@ function getData(url, searchTerm, filmFilter, classFilter, passengerFilter) {
 }
 
 function dataLoaded(xhr, searchTerm, filmFilter, classFilter, passengerFilter) {
-    console.log(xhr.responseText);
+    // console.log(xhr.responseText);
     
     // parse JSON response
     let obj = JSON.parse(xhr.responseText);
@@ -173,7 +173,6 @@ function getFilmTitle(filmNumber) {
         "4": "The Phantom Menace",
         "5": "Attack of the Clones",
         "6": "Revenge of the Sith",
-        "7": "The Force Awakens"
     };
     
     return filmTitles[filmNumber] || "Unknown";
