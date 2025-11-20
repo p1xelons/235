@@ -1,7 +1,7 @@
 /* card css for results */
 .starship-card {
     background: rgba(255, 255, 255, 0.08);
-    border: 2px solid #000;
+    border: 2px solid #FFE81F;
     border-radius: 10px;
     padding: 20px;
     transition: all 0.3s;
@@ -14,9 +14,9 @@
 .starship-name {
     font-size: 22px;
     font-weight: bold;
-    color: #000;
+    color: #FFE81F;
     margin-bottom: 15px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #FFE81F;
     padding-bottom: 10px;
 }
 .starship-detail {
@@ -25,5 +25,45 @@
     line-height: 1.6;
 }
 .starship-detail strong {
-    color: #000;
+    color: #FFE81F;
+}
+
+/* main default css for searching interface */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a1a2e);
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+h1 {
+    text-align: center;
+    color: #ffe81f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+.controls {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffe81f;
+    font-weight: bold;
 }
