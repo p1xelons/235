@@ -1,6 +1,9 @@
 // event listener on load
 window.onload = (e) => {
     document.querySelector("#search").onclick = searchButtonClicked;
+
+    // if there is local storage
+    loadSavedSearch();
 };
 
 // var for the display term
@@ -26,7 +29,7 @@ function searchButtonClicked() {
     term = term.trim();
     
     // save term and filters
-    //saveSearchParameters(term, filmFilter, classFilter, passengerFilter);
+    saveSearchParameters(term, filmFilter, classFilter, passengerFilter);
     
     // update ui to keep user updated
     document.querySelector("#status").innerHTML = "<b>Searching for starships...</b>";
@@ -194,4 +197,33 @@ function formatCost(cost) {
 function dataError(e) {
     // console.log("An error occurred loading data");
     document.querySelector("#status").innerHTML = "<b class='no-results'>Error loading starship data. Please try again.</b>";
+}
+
+// load from local storage
+function loadSavedSearch() {
+    const savedTerm = localStorage.getItem("starshipSearchTerm");
+    const savedFilm = localStorage.getItem("starshipFilmFilter");
+    const savedClass = localStorage.getItem("starshipClassFilter");
+    const savedPassengers = localStorage.getItem("starshipPassengerFilter");
+    
+    if (savedTerm) {
+        document.querySelector("#searchterm").value = savedTerm;
+    }
+    if (savedFilm) {
+        document.querySelector("#filmFilter").value = savedFilm;
+    }
+    if (savedClass) {
+        document.querySelector("#classFilter").value = savedClass;
+    }
+    if (savedPassengers) {
+        document.querySelector("#passengerFilter").value = savedPassengers;
+    }
+}
+
+// save to local storage
+function saveSearchParameters(term, film, classType, passengers) {
+    localStorage.setItem("starshipSearchTerm", term);
+    localStorage.setItem("starshipFilmFilter", film);
+    localStorage.setItem("starshipClassFilter", classType);
+    localStorage.setItem("starshipPassengerFilter", passengers);
 }
