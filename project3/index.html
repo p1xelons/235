@@ -3,23 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <title>Neon Snake - Retro Arcade Game</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
 </head>
 <body>
-    <!--External source-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
+    <header>
+        <h1>Snake</h1>
+        <p class="subtitle">Classic arcade action with a modern twist</p>
+    </header>
 
-    
-    <div id="score">Score: 0</div>
-    <div id="gameContainer"></div>
-    <div class="controls">Use Arrow Keys to move</div>
-    <div id="gameOver">
-        <h2>Game Over!</h2>
-        <p id="finalScore"></p>
-        <button id="restartBtn">Play Again</button>
-    </div>
+    <main>
+        <section class="game-info">
+            <div class="info-panel">
+                <div class="stat-box">
+                    <span class="stat-label">Score</span>
+                    <span id="score" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">High Score</span>
+                    <span id="highScore" class="stat-value">0</span>
+                </div>
+            </div>
+        </section>
 
-    <script src="javascript/snake.js"></script>
+        <section class="game-container">
+            <div id="gameCanvas"></div>
+            
+            <div id="startScreen" class="overlay-screen">
+                <div class="screen-content">
+                    <h2>Ready to Play?</h2>
+                    <p class="instructions">
+                        Use <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> arrow keys to move<br>
+                        Eat the glowing orbs to grow<br>
+                        Avoid walls and yourself!
+                    </p>
+                    <button id="startBtn" class="game-btn">Start Game</button>
+                    <div class="difficulty-selector">
+                        <label for="difficulty">Difficulty:</label>
+                        <select id="difficulty">
+                            <option value="easy">Easy</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gameOverScreen" class="overlay-screen" style="display: none;">
+                <div class="screen-content">
+                    <h2>Game Over!</h2>
+                    <p id="finalScore" class="final-score"></p>
+                    <p id="highScoreMsg" class="high-score-msg"></p>
+                    <button id="restartBtn" class="game-btn">Play Again</button>
+                </div>
+            </div>
+
+            <div id="pauseScreen" class="overlay-screen" style="display: none;">
+                <div class="screen-content">
+                    <h2>Paused</h2>
+                    <p>Press <kbd>SPACE</kbd> to resume</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="controls-panel">
+            <h3>Controls</h3>
+            <ul>
+                <li><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> Move</li>
+                <li><kbd>SPACE</kbd> Pause/Resume</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Neon Snake Game | Built with PixiJS</p>
+    </footer>
+
+    <script src="javascript/classes.js"></script>
+    <script src="javascript/snakeUtils.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 </html>
