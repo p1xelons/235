@@ -125,14 +125,6 @@ class GameState {
     // add to score
     addScore(points) {
         this.score += points;
-        
-        // Level up every 100 points
-        const newLevel = Math.floor(this.score / 100) + 1;
-        if (newLevel > this.level) {
-            this.level = newLevel;
-            return true; // Level up occurred
-        }
-        return false;
     }
 
     // reset game state

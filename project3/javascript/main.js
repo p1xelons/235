@@ -114,9 +114,7 @@ function restartGame() {
     startGame();
 }
 
-/**
- * Toggles the pause state
- */
+// pause or unpause
 function togglePause() {
     if (!gameState.isRunning) return;
     
@@ -129,9 +127,7 @@ function togglePause() {
     }
 }
 
-/**
- * Main game loop called every frame
- */
+// main game loop
 function gameLoop() {
     if (!gameState.isRunning || gameState.isPaused) return;
     
@@ -145,20 +141,18 @@ function gameLoop() {
     }
 }
 
-/**
- * Updates the game state each tick
- */
+// update game per frame
 function updateGame() {
-    // Move snake
+    // move snake
     const newHead = snake.move();
     
-    // Check collisions
+    // check collisions
     if (snake.checkWallCollision() || snake.checkSelfCollision()) {
         endGame();
         return;
     }
     
-    // Check food collision
+    // check food collision
     if (food.isAt(newHead.x, newHead.y)) {
         snake.grow();
         
@@ -175,7 +169,7 @@ function updateGame() {
         food.spawn(snake.segments);
     }
     
-    // Redraw
+    // redraw
     drawSnake();
     drawFood();
 }
@@ -214,7 +208,7 @@ function drawSnake() {
 function drawFood() {
     foodGraphics.clear();
     
-    // glowing effect
+    // pulse effect
     const time = Date.now() / 200;
     const pulse = Math.sin(time) * 0.3 + 0.7;
     

@@ -71,8 +71,18 @@ function querySelectorAll(selector) {
 
 /// get difficulty from user
 function getSelectedDifficulty() {
-    const difficultySelect = querySelector('#difficulty');
-    return difficultySelect.value;
+    // check if its game over or start
+    const startScreen = querySelector('#startScreen');
+    const gameOverScreen = querySelector('#gameOverScreen');
+    
+    if (startScreen.style.display !== 'none') {
+        return querySelector('#difficultyStart').value;
+    } else if (gameOverScreen.style.display === 'flex') {
+        return querySelector('#difficultyRestart').value;
+    }
+    
+    // Default fallback
+    return 'normal';
 }
 
 // web audio api, get audio

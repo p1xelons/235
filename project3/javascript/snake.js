@@ -33,24 +33,24 @@ let lastUpdateTime = 0;
 function setup() {
     stage = app.stage;
     
-    // #1 - Create the snake container
+    // create the snake container
     snakeContainer = new PIXI.Container();
     stage.addChild(snakeContainer);
     
-    // #2 - Create the food graphics
+    // create the food graphics
     foodGraphics = new PIXI.Graphics();
     stage.addChild(foodGraphics);
     
-    // #3 - Initialize game state
+    // initialize game state
     initGame();
     
-    // #4 - Start update loop
+    // start update loop
     app.ticker.add(gameLoop);
     
-    // #5 - Start listening for keyboard events
+    // start listening for keyboard events
     window.addEventListener('keydown', onKeyDown);
     
-    // #6 - Setup restart button
+    // setup restart button
     document.getElementById('restartBtn').addEventListener('click', restartGame);
 }
 

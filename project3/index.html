@@ -10,7 +10,7 @@
 <body>
     <header>
         <h1>Snake</h1>
-        <p class="subtitle">Classic arcade action with a modern twist</p>
+        <p class="subtitle">classic arcade game</p>
     </header>
 
     <main>
@@ -41,7 +41,7 @@
                     <button id="startBtn" class="game-btn">Start Game</button>
                     <div class="difficulty-selector">
                         <label for="difficulty">Difficulty:</label>
-                        <select id="difficulty">
+                        <select id="difficultyStart">
                             <option value="easy">Easy</option>
                             <option value="normal" selected>Normal</option>
                             <option value="hard">Hard</option>
@@ -56,6 +56,14 @@
                     <p id="finalScore" class="final-score"></p>
                     <p id="highScoreMsg" class="high-score-msg"></p>
                     <button id="restartBtn" class="game-btn">Play Again</button>
+                    <div class="difficulty-selector">
+                        <label for="difficulty">Difficulty:</label>
+                        <select id="difficultyRestart">
+                            <option value="easy">Easy</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -77,7 +85,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Neon Snake Game | Built with PixiJS</p>
+        <p>&copy; Snake Game, with PixiJS</p>
+        <a href="https://www.people.rit.edu/sah3461/235/project3/doc.html">Documentation</a>
     </footer>
 
     <script src="javascript/classes.js"></script>
